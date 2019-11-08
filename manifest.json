@@ -8,11 +8,15 @@
         "type": "image/png"
       }
     ],
+    "neo4jDesktop": {
+      "apiVersion": "1.2.0"
+    },  
     "start_url": "./index.html",
     "display": "standalone",
     "theme_color": "#000000",
     "background_color": "#ffffff",
     "homepage": "https://github.com/neo4j-apps/teapot",
+    "hostpage": "https://neo4j-apps.github.io/teapot/",
     "categories": ["toy"],
     "related_applications": [
         {
