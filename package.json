@@ -1,0 +1,27 @@
+{
+  "name": "teapot",
+  "version": "1.0.0",
+  "description": "Not actually a Graph App, I'm a teapot!",
+  "homepage": "https://github.com/neo4j-apps/teapot#readme",
+  "main": "index.js",
+  "neo4jDesktop": {
+    "apiVersion": "1.2.0"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neo4j-apps/teapot.git"
+  },
+  "keywords": [
+    "graph-app",
+    "neo4j"
+  ],
+  "author": "Andreas Kollegger",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/neo4j-apps/teapot/issues"
+  }
+}
