@@ -4,12 +4,9 @@
   "description": "Not actually a Graph App, I'm a teapot!",
   "homepage": "https://github.com/neo4j-apps/teapot#readme",
   "main": "index.js",
-  "neo4jDesktop": {
-    "apiVersion": "1.2.0"
-  },
   "scripts": {
     "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "publish": "git subtree push --prefix public origin gh-pages"
   },
   "repository": {
     "type": "git",
