@@ -1,6 +1,8 @@
 {
     "short_name": "Teapot",
     "name": "Teapot",
+    "description":"I am a teapot",
+    "permissions": [],
     "icons": [
       {
         "src": "favicon.png",
@@ -9,8 +11,8 @@
       }
     ],
     "neo4jDesktop": {
-      "apiVersion": "1.2.0"
-    },  
+      "apiVersion": "^1.2.0"
+    },
     "start_url": "./index.html",
     "display": "standalone",
     "theme_color": "#000000",
@@ -21,8 +23,8 @@
     "related_applications": [
         {
           "platform": "neo4j",
-          "url": "https://play.google.com/store/apps/details?id=com.example.app1",
-          "id": "com.example.app1"
+          "url": "https://github.com/neo4j/neo4j-browser/",
+          "id": "@neo4j/neo4j-browser"
         }
       ]
   }

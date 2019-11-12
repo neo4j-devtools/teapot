@@ -1,13 +1,21 @@
 {
-  "name": "teapot",
+  "name": "@neo4j-apps/teapot",
   "version": "1.0.0",
   "description": "Not actually a Graph App, I'm a teapot!",
   "homepage": "https://github.com/neo4j-apps/teapot#readme",
-  "main": "index.js",
+  "main": "dist/index.html",
+  "neo4jDesktop": {
+    "apiVersion": "^1.2.0"
+  },
   "scripts": {
     "start": "node index.js",
-    "publish": "git subtree push --prefix public origin gh-pages"
+    "build": "rm -rf dist && cp -r public dist",
+    "deploy": "git subtree push --prefix public origin gh-pages",
+    "release": "np patch"
   },
+  "files": [
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/neo4j-apps/teapot.git"
@@ -20,5 +28,16 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/neo4j-apps/teapot/issues"
+  },
+	"devDependencies": {
+		"np": "*"
+	},
+  "np": {
+		"yarn": false,
+		"contents": "dist"
+  },
+  "publishConfig": {
+    "access": "public"
   }
+  
 }
