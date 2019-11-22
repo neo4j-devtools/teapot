@@ -1,6 +1,6 @@
 {
   "name": "@neo4j-apps/teapot",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Not actually a Graph App, I'm a teapot!",
   "homepage": "https://github.com/neo4j-apps/teapot#readme",
   "main": "dist/index.html",
@@ -38,6 +38,6 @@
   },
   "publishConfig": {
     "access": "public",
-    "registry":"https://npm.pkg.github.com/"
+    "registry": "https://npm.pkg.github.com/"
   }
 }
