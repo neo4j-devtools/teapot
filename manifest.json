@@ -19,7 +19,7 @@
     "background_color": "#000000",
     "homepage": "https://github.com/neo4j-apps/teapot",
     "hostpage": "https://neo4j-apps.github.io/teapot/",
-    "categories": ["toy"],
+    "categories": ["template"],
     "related_applications": [
         {
           "platform": "neo4j",
