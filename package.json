@@ -29,15 +29,14 @@
   "bugs": {
     "url": "https://github.com/neo4j-apps/teapot/issues"
   },
-	"devDependencies": {
-		"np": "*"
-	},
+  "devDependencies": {
+    "np": "*"
+  },
   "np": {
-		"yarn": false,
-		"contents": "dist"
+    "yarn": false,
+    "contents": "dist"
   },
   "publishConfig": {
     "access": "public"
   }
-  
 }
