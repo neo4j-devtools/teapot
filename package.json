@@ -1,6 +1,6 @@
 {
   "name": "@neo4j-apps/teapot",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Not actually a Graph App, I'm a teapot!",
   "homepage": "https://github.com/neo4j-apps/teapot#readme",
   "main": "dist/index.html",
