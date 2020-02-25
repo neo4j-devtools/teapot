@@ -18,7 +18,6 @@
     "theme_color": "#000000",
     "background_color": "#000000",
     "homepage": "https://github.com/neo4j-apps/teapot",
-    "hostpage": "https://neo4j-apps.github.io/teapot/",
     "categories": ["template"],
     "related_applications": [
         {
@@ -26,5 +25,11 @@
           "url": "https://github.com/neo4j/neo4j-browser/",
           "id": "@neo4j/neo4j-browser"
         }
-      ]
+      ],
+    "relate": {
+      "apiVersion": "^1.2.0",
+      "id":"@neo4j/neo4j-teapot",
+      "live": "https://neo4j-apps.github.io/teapot/",
+      "distribution_url":""
+    }
   }
