@@ -1,0 +1,56 @@
+{
+    "name": "Teapot",
+    "description":"I am a teapot",
+    "tags":[],
+    "app":{
+        "id":"@neo4j-apps/teapot",
+        "manifest":"public/manifest.json"
+    },
+    "files":[
+        "all-teas.bloom",
+        "tea.guide",
+        "import/*"
+    ],
+    "databases":[
+        {
+            "name":"Live Production Server",
+            "url":"neo4j://teapot.aura.io/teas",
+            "version":"3.5.12",
+            "tags":[],
+            "apps":[
+                "@neo4j-apps/teapot",
+                "@neo4j-apps/neo4j-browser",
+                "@neo4j-apps/neo4j-bloom"
+            ],
+            "open with":"@neo4j-apps/teapot",
+            "readme":"http://guides.neo4j.com/teapot.html",
+            "@neo4j-apps/neo4j-browser": {
+                "init":":play teapot"
+            },
+            "@neo4j-apps/neo4j-bloom": {
+                "perspectives":[
+                    {
+                        "role":"purchasing",
+                        "perspective":"tea supply"
+                    },
+                    {
+                        "role":"seller",
+                        "perspective":"all teas"
+                    }
+                ]
+            },
+            "backups":[
+                {
+                    "url":"file:backups/teas-20190712.graphdb.backup",
+                    "version":"3.5.12",
+                    "created":"2019-07-12"
+                },
+                {
+                    "backup-20190810":"file:backups/teas-20190810.graphdb.backup",
+                    "version":"3.5.12",
+                    "created":"2019-08-10"
+                }
+            ]
+        }
+    ]
+}
