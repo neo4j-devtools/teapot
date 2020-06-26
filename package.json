@@ -8,6 +8,23 @@
     "apiVersion": "^1.2.0"
   },
   "scripts": {
+    "relate:clean": "run-s --silent --continue-on-error relate:stop-dbms relate:clean-*",
+    "relate:clean-data": "shx rm -rf '/Users/akollegger/Library/Application Support/com.Neo4j.Relate/Data/'",
+    "relate:clean-env": "shx rm -rf '/Users/akollegger/Library/Application Support/com.Neo4j.Relate/Config/'",
+    "relate:clean-web": "pm2 delete teapot-web",
+    "relate:prepare": "relate env:list && relate env:list | shx grep teapot && npm run relate:init",
+    "relate:init": "run-s relate:init-*",
+    "relate:init-1env": "node -e '' | relate env:init --name=teapot --type=LOCAL",
+    "relate:init-2dbms": "relate dbms:install -e teapot -n teapot 4.1.0 && relate dbms:start -e teapot teapot",
+    "relate:init-3wait": "wait-on tcp:7687 && sleep 5",
+    "relate:init-4access": "relate dbms:access-token -e teapot teapot",
+    "relate:init-5database": "relate db:create -e teapot -D teapot teapedia",
+    "relate:init-6browser": "relate extension:install neo4j-browser -V 1.0.1 -e teapot",
+    "relate:start-dbms": "relate dbms:start -e teapot teapot",
+    "relate:stop-dbms": "relate dbms:stop -e teapot teapot",
+    "relate:start-web": "relate env:use teapot | pm2 start 'relate-web start' --name teapot-web",
+    "relate:stop-web": "pm2 stop teapot-web",
+    "relate:open-browser": "relate app:open neo4j-browser",
     "start": "node index.js",
     "build": "rm -rf dist && cp -r public dist",
     "deploy": "git subtree push --prefix public origin gh-pages",
@@ -30,7 +47,12 @@
     "url": "https://github.com/neo4j-apps/teapot/issues"
   },
   "devDependencies": {
-    "np": "*"
+    "@relate/cli": "^1.0.1-alpha.6",
+    "@relate/web": "^1.0.1-alpha.4",
+    "np": "*",
+    "npm-run-all": "^4.1.5",
+    "pm2": "^4.4.0",
+    "shx": "^0.3.2"
   },
   "np": {
     "yarn": false,
@@ -38,5 +60,8 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "dependencies": {
+    "wait-on": "^5.0.1"
   }
 }
